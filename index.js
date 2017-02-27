@@ -17,25 +17,53 @@ function start() {
   quiz = createQuiz(nProblems, nMult, primes);
   currentProblem = 0;
   updateQuestion(quiz, currentProblem);
+  hideScoreViewer();
+  var answers = document.getElementById('answers');
+  while(answers.firstChild) {
+    answers.removeChild(answers.firstChild);
+  }
   showQViewer();
-
 }
 
 function submitAnswer() {
-  quiz[currentProblem].attempt = document.getElementById('answer').value;
-  quiz[currentProblem].correct = quiz[currentProblem].attempt == quiz[currentProblem].answer;
+
+  var curr = quiz[currentProblem]
+  curr.attempt = document.getElementById('answer').value;
+  quiz.attempts++;
+  curr.correct = curr.attempt == curr.answer;
+  if (curr.correct) quiz.corrects++;
+
+  updateScore();
   currentProblem++;  
   updateQuestion();
+
 }
 
 function updateQuestion() {
+  clear('answer');
   if (currentProblem < quiz.length) {
     var question = document.getElementById('question');
     question.innerHTML = formatProblem(quiz[currentProblem]);
-  }
-  else {
+  } else {
     resetQuiz();
   }
+
+}
+
+function updateScore() {
+  var curr = quiz[currentProblem]
+  var attempt = curr.attempt;
+  var answer = curr.answer;
+  var tr = document.createElement('tr');
+  var attemptCell = document.createElement('td');
+  attemptCell.appendChild(document.createTextNode(attempt));
+  tr.appendChild(attemptCell);
+  var answerCell = document.createElement('td');
+  answerCell.appendChild(document.createTextNode(answer));
+  tr.appendChild(answerCell);
+  document.getElementById('answers').appendChild(tr);
+  var scoreEl = document.getElementById('scoreDisplay');
+  scoreEl.innerHTML = Math.round((quiz.corrects/quiz.attempts) * 100) + '%';
 }
 
 function hideScoreViewer() {
@@ -58,4 +86,10 @@ function showQViewer() {
 function resetQuiz() {
   currentProblem = null;
   hideQViewer();
+  showScoreViewer();
+}
+
+function clear(id, def) {
+  var el = document.getElementById(id);
+  el.value = def || '';
 }

@@ -3,6 +3,8 @@ function createQuiz(nProblems, nMult, primes) {
   for (var i = 0; i < nProblems; i++) {
     problems.push(createProblem(nMult, primes))
   }
+  problems.attempts = 0;
+  problems.corrects = 0;
   return problems;
 }
 

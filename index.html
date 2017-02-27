@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Prime &times; Prime</h1>
+    <form id="currentProblem" class="hidden">
+      <label id="question" for="answer"></label>
+      <input id="answer" name="answer" type="number"></input>
+      <button id="submitAnswer" type="button">Submit</button>
+    </form>
+    <table id="scoreCard" class="hidden">
+      <thead>
+        <td>Your Answer</td>
+        <td>Correct Answer</td>
+      </thead>
+      <tr>
+        <td>Hello</td>
+        <td>World</td>
+      </tr>
+    </table>
+    <form id="options">
+      <div>
+        <label for="nProblems">How many problems?</label>
+        <input id="nProblems" name="nProblems" type="number" value=1></input>
+      </div>
+      <div>
+        <label for="nMult">How many multipliers?</label>
+        <input id="nMult" name="nMult" type="number" value=2></input>
+      </div>
+      <div>
+        <label for="nPrimes">How many primes?</label>
+        <input id="nPrimes" name="nPrimes" type="number" value=1></input>
+      </div>
+      <div>
+        <button id="getInputs" type="button">Get Problems</button>
+      </div>
+    </form>
+    <script src="index.js"></script>
+    <script src="primes.js"></script>
+    <script src="quiz.js"></script>
+  </body>
+</html>

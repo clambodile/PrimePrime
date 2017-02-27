@@ -21,21 +21,21 @@
       </tfoot>
     </table>
     <form id="options">
-      <div>
-        <label for="nProblems">How many problems?</label>
-        <input id="nProblems" name="nProblems" type="number" value=1></input>
-      </div>
-      <div>
-        <label for="nMult">How many multipliers?</label>
-        <input id="nMult" name="nMult" type="number" value=2></input>
-      </div>
-      <div>
-        <label for="nPrimes">How many primes?</label>
-        <input id="nPrimes" name="nPrimes" type="number" value=1></input>
-      </div>
-      <div>
-        <button id="getInputs" type="button">Get Problems</button>
-      </div>
+      <table>
+        <tr>
+          <td><label for="nProblems">How many problems?</label></td>
+          <td><input id="nProblems" name="nProblems" type="number" value=5></input></td>
+        </tr>
+        <tr>
+          <td><label for="nMult">How many multipliers?</label></td>
+          <td><input id="nMult" name="nMult" type="number" value=2></input></td>
+        </tr>
+        <tr>
+          <td><label for="nPrimes">How many primes?</label></td>
+          <td><input id="nPrimes" name="nPrimes" type="number" value=10></input></td>
+        </tr>
+      </table>
+      <button id="getInputs" type="button">Get Problems</button>
     </form>
     <script src="index.js"></script>
     <script src="primes.js"></script>

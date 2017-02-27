@@ -5,6 +5,12 @@ var quiz;
 /* Attach Event Handlers */
 document.getElementById('getInputs').addEventListener('click', start);
 document.getElementById('submitAnswer').addEventListener('click', submitAnswer);
+document.getElementById('answer').addEventListener('keypress', function(event) {
+  if (event.keyCode == 13) {
+    event.preventDefault();
+    submitAnswer();
+  }
+});
 
 /* Event Handlers */
 function start() {

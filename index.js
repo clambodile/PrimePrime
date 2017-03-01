@@ -61,6 +61,9 @@ function updateScore() {
   var attempt = curr.attempt;
   var answer = curr.answer;
   var tr = document.createElement('tr');
+  var problemCell = document.createElement('td');
+  problemCell.innerHTML = formatProblem(curr);
+  tr.appendChild(problemCell);
   var attemptCell = document.createElement('td');
   attemptCell.appendChild(document.createTextNode(attempt));
   tr.appendChild(attemptCell);

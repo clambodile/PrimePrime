@@ -4,41 +4,43 @@
     <link href="styles.css" type="text/css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Prime &times; Prime</h1>
-    <form id="currentProblem" class="hidden">
-      <label id="question" for="answer"></label>
-      <input id="answer" name="answer" type="number"></input>
-      <button id="submitAnswer" type="button">Submit</button>
-    </form>
-    <table id="scoreCard" class="hidden">
-      <thead>
-        <td>Problem</td>
-        <td>Your Answer</td>
-        <td>Correct Answer</td>
-      </thead>
-      <tbody id="answers">
-      </tbody>
-      <tfoot>
-        <td id="scoreDisplay"></td>
-      </tfoot>
-    </table>
-    <form id="options">
-      <table>
-        <tr>
-          <td><label for="nProblems">How many problems?</label></td>
-          <td><input id="nProblems" name="nProblems" type="number" value=5></input></td>
-        </tr>
-        <tr>
-          <td><label for="nMult">How many multipliers?</label></td>
-          <td><input id="nMult" name="nMult" type="number" value=2></input></td>
-        </tr>
-        <tr>
-          <td><label for="nPrimes">How many primes?</label></td>
-          <td><input id="nPrimes" name="nPrimes" type="number" value=10></input></td>
-        </tr>
+    <div class="container">
+      <h1>Prime &times; Prime</h1>
+      <form id="currentProblem" class="hidden">
+        <label id="question" for="answer"></label>
+        <input id="answer" name="answer" type="number"></input>
+        <button id="submitAnswer" type="button">Submit</button>
+      </form>
+      <table id="scoreCard" class="hidden">
+        <thead>
+          <td>Problem</td>
+          <td>Your Answer</td>
+          <td>Correct Answer</td>
+        </thead>
+        <tbody id="answers">
+        </tbody>
+        <tfoot>
+          <td id="scoreDisplay"></td>
+        </tfoot>
       </table>
-      <button id="getInputs" type="button">Get Problems</button>
-    </form>
+      <form id="options">
+        <table>
+          <tr>
+            <td><label for="nProblems">How many problems?</label></td>
+            <td><input id="nProblems" name="nProblems" type="number" value=5></input></td>
+          </tr>
+          <tr>
+            <td><label for="nMult">How many multipliers?</label></td>
+            <td><input id="nMult" name="nMult" type="number" value=2></input></td>
+          </tr>
+          <tr>
+            <td><label for="nPrimes">How many primes?</label></td>
+            <td><input id="nPrimes" name="nPrimes" type="number" value=10></input></td>
+          </tr>
+        </table>
+        <button id="getInputs" type="button">Get Problems</button>
+      </form>
+    </div>
     <script src="index.js"></script>
     <script src="primes.js"></script>
     <script src="quiz.js"></script>

@@ -1,0 +1,23 @@
+{
+  "name": "prime-prime",
+  "version": "1.0.0",
+  "description": "multiplication toy app in vanilla js",
+  "main": "index.html",
+  "devDependencies": {
+    "eslint": "^2.0.0-rc.1"
+  },
+  "scripts": {
+    "test": "open jasmine/SpecRunner.html",
+    "lint": "node_modules/.bin/eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clambodile/PrimePrime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clambodile/PrimePrime/issues"
+  },
+  "homepage": "https://github.com/clambodile/PrimePrime#readme"
+}
